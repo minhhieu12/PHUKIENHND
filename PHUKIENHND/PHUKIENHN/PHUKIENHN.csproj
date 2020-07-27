@@ -54,6 +54,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAO\DataProvider.cs" />
+    <Compile Include="DAO\LoginDAO.cs" />
     <Compile Include="frmCapNhatHD.cs">
       <SubType>Form</SubType>
     </Compile>

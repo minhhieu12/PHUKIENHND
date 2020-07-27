@@ -47,7 +47,7 @@
             this.label1.Location = new System.Drawing.Point(174, 127);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(123, 18);
-            this.label1.TabIndex = 2;
+            this.label1.TabIndex = 4;
             this.label1.Text = "Tên đăng nhập:";
             // 
             // label2
@@ -57,7 +57,7 @@
             this.label2.Location = new System.Drawing.Point(174, 166);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(82, 18);
-            this.label2.TabIndex = 2;
+            this.label2.TabIndex = 5;
             this.label2.Text = "Mật khẩu:";
             // 
             // txtTenDN
@@ -65,14 +65,15 @@
             this.txtTenDN.Location = new System.Drawing.Point(303, 128);
             this.txtTenDN.Name = "txtTenDN";
             this.txtTenDN.Size = new System.Drawing.Size(191, 20);
-            this.txtTenDN.TabIndex = 3;
+            this.txtTenDN.TabIndex = 0;
             // 
             // txtMK
             // 
             this.txtMK.Location = new System.Drawing.Point(303, 167);
             this.txtMK.Name = "txtMK";
+            this.txtMK.PasswordChar = '*';
             this.txtMK.Size = new System.Drawing.Size(191, 20);
-            this.txtMK.TabIndex = 3;
+            this.txtMK.TabIndex = 1;
             // 
             // btnDangNhap
             // 
@@ -82,19 +83,22 @@
             this.btnDangNhap.Location = new System.Drawing.Point(209, 222);
             this.btnDangNhap.Name = "btnDangNhap";
             this.btnDangNhap.Size = new System.Drawing.Size(110, 39);
-            this.btnDangNhap.TabIndex = 4;
+            this.btnDangNhap.TabIndex = 2;
             this.btnDangNhap.Text = "Đăng nhập";
+            this.btnDangNhap.Click += new System.EventHandler(this.btnDangNhap_Click);
             // 
             // btnHuy
             // 
             this.btnHuy.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHuy.Appearance.Options.UseFont = true;
+            this.btnHuy.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnHuy.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnHuy.ImageOptions.Image")));
             this.btnHuy.Location = new System.Drawing.Point(353, 222);
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.Size = new System.Drawing.Size(110, 39);
-            this.btnHuy.TabIndex = 4;
+            this.btnHuy.TabIndex = 3;
             this.btnHuy.Text = "Huỷ";
+            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
             // textBox1
             // 
@@ -122,9 +126,11 @@
             // 
             // frmDangNhap
             // 
+            this.AcceptButton = this.btnDangNhap;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.CancelButton = this.btnHuy;
             this.ClientSize = new System.Drawing.Size(520, 281);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.textBox1);
@@ -136,6 +142,7 @@
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmDangNhap";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đăng Nhập";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
